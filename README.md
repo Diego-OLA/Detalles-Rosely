@@ -1,7 +1,7 @@
 # Flores App
 
 Aplicación web desarrollada con Next.js para mostrar arreglos florales, filtrar por tipo de flor y ver el detalle de cada arreglo.
-
+El nombre del repo se debe a que esta basado en un negocio real y para obtener de vercel una URL más decente y poder presentar el sitio le coloque ese nombre
 ## Descripción del proyecto
 
 Flores App es un catálogo visual de arreglos florales que permite:
