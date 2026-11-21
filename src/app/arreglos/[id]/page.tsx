@@ -31,7 +31,7 @@ export default async function ArregloDetallePage({ params }: Props) {
 
   return (
     <>
-      <Hero />
+      <Hero user={undefined} />
       <div className="min-h-screen bg-rose-100 py-10 px-4">
         <div className="max-w-7xl py-20">
           
