@@ -33,7 +33,7 @@ export default async function HomePage() {
       <Hero user={user? user: undefined} />  
       <HomeImage/>
           <ArregloForm flores={flores} user={user? user: undefined}/> 
-      {flores.map((f: any) => (
+      {/* {flores.map((f: any) => (
         <div className='m-auto w-11/12'>
           <div className='flex justify-start hover:bg-rose-600 bg-rose-400'> 
         <Link key={f.id} href={`/flores/${f.slug}`}>
@@ -41,7 +41,7 @@ export default async function HomePage() {
         </Link>
          </div>
         </div>
-      ))}
+      ))} */}
       
       <Arreglos arreglos={arreglos} flores={flores} />
 

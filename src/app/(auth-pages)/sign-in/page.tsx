@@ -6,7 +6,7 @@ export default function SignIn(){
 return(
     <>
     <form action={Login}>
-        <div className="bg-red-300 flex flex-col justify-center place-self-center w-1/3 gap-3 rounded my-20">
+        <div className="bg-red-300 flex flex-col justify-center place-self-center sm:w-1/2 md:w-1/3 gap-3 rounded h-72 my-32">
         <div className="place-items-center flex flex-col gap-5 m-5">
             <h1 className="text-white font-bold text-3xl">Iniciar Sesión</h1>
             <div>
