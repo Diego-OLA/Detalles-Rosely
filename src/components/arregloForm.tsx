@@ -22,11 +22,11 @@ export default function ArregloForm({flores,user}:ArregloProps){
 
     return(
         <>
-        <div className="m-4 flex flex-col items-center place-self-center hover:bg-rose-600 bg-rose-400  w-60 md:w-1/2 sm:w-1/3  rounded p-2">
+        <div className="m-4 flex flex-col items-center place-self-center  bg-rose-400  w-60 md:w-1/2 sm:w-1/3  rounded p-2">
         <form action={nuevoArreglo}>
             <div className="bg-red-100 p-2 rounded flex flex-col">
-            <input className=" w-full md:w-md sm:w-sm" name="descripcion" type="text" placeholder="Descripcion del arreglo" required />
-            <input className="w-full md:w-md sm:w-sm"  name="imgUrl" type="text" placeholder="Url de la imagen" required multiple />
+            <input className=" w-full md:w-md m-1 p-1 border-rose-500 border-2 rounded" name="descripcion" type="text" placeholder="Descripcion del arreglo" required />
+            <input className="w-full md:w-md m-1 p-1  border-rose-500 border-2 rounded"  name="imgUrl" type="text" placeholder="Url de la imagen" required multiple />
 
              <fieldset className="mt-1">
             <legend className="text-sm font-semibold text-gray-800 mb-1">
