@@ -8,6 +8,9 @@ import HomeImage from '@/components/HomeImage';
 import { div } from 'framer-motion/client';
 import FilterFlor from '@/components/FilterFlor';
 import Arreglos from '@/components/Arreglos';
+import ArregloForm from '@/components/arregloForm';
+import { createClient } from '@/utils/supabase/server';
+
 
 
 
@@ -18,13 +21,18 @@ export default async function HomePage() {
     getArreglosConFlores(),
     getFlores(),
   ]);
+   const supabase = await createClient()
+      const {
+          data: {user}, 
+      } = await supabase.auth.getUser()
 
   
 
   return (
     <>
-      <Hero />  
+      <Hero user={user? user: undefined} />  
       <HomeImage/>
+          <ArregloForm flores={flores} user={user? user: undefined}/> 
       {flores.map((f: any) => (
         <div className='m-auto w-11/12'>
           <div className='flex justify-start hover:bg-rose-600 bg-rose-400'> 
@@ -36,6 +44,8 @@ export default async function HomePage() {
       ))}
       
       <Arreglos arreglos={arreglos} flores={flores} />
+
+   
     </>
   );
 }

@@ -1,15 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
-export default function Hero() {
+import AuthButton from "./AuthButton";
+import { User } from "@supabase/supabase-js";
+
+interface userProp {
+  user:User | undefined
+}
+
+export default function Hero({user}:userProp) {
   return (
     <>
   
     <header className="p-1 md:p-4 w-full absolute z-10 text-center bg-stone-900 opacity-50  ">
       <div className="flex ">
-     <div className="flex flex-col mx-auto">
+        <AuthButton user={user}/>   
+      <div className="flex flex-col mx-auto">
       <h1 className=" md:text-3xl  font-bold text-white">FLORES NATURALES Y ETERNAS</h1>
-      <p className="text-orange-100"></p>
       </div>
        <div className="  ">
       
@@ -26,7 +33,7 @@ export default function Hero() {
       />
     </a>
      <a
-      href="https://instagram"
+      href="https://www.instagram.com/roselymenjivar/"
       target="_blank"
       rel="noopener noreferrer"
     >
