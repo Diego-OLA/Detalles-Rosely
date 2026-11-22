@@ -14,7 +14,7 @@ export  default async function AuthButton({user}:userProps){
     if(!user){
         return(
             <>
-            <div className="bg-rose-300 p-2 font-bold text-white  hover:bg-rose-500 ">
+            <div className="bg-rose-300 p-2 rounded font-bold text-white  hover:bg-rose-500 ">
             <Link  href="/sign-in">Iniciar Sesión</Link>
             </div>
             </>

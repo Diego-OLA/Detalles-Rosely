@@ -18,6 +18,7 @@ export default function ArregloForm({flores,user}:ArregloProps){
     if (!user){
         return
     }
+    const [imgUrl,setImgUrl]= useState<string | null>('')
    
 
     return(
@@ -26,7 +27,10 @@ export default function ArregloForm({flores,user}:ArregloProps){
         <form action={nuevoArreglo}>
             <div className="bg-red-100 p-2 rounded flex flex-col">
             <input className=" w-full md:w-md m-1 p-1 border-rose-500 border-2 rounded" name="descripcion" type="text" placeholder="Descripcion del arreglo" required />
-            <input className="w-full md:w-md m-1 p-1  border-rose-500 border-2 rounded"  name="imgUrl" type="text" placeholder="Url de la imagen" required multiple />
+            <input className=" w-full md:w-md m-1 p-1 border-rose-500 border-2 rounded" name="precio" type="number" placeholder="precio" max={100} min={5} required />
+            <input className="w-full md:w-md m-1 p-1  border-rose-500 border-2 rounded"
+              name="imgUrl" type="text" placeholder="Url de la imagen" required  onChange={(t) =>{setImgUrl(t.target.value)}} />
+            <img className="h-48 object-cover" src={imgUrl? imgUrl : undefined} alt="" />
 
              <fieldset className="mt-1">
             <legend className="text-sm font-semibold text-gray-800 mb-1">

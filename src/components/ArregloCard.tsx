@@ -41,26 +41,31 @@ export default function ({arreglo}: {arreglo:any}){
         )
         }
       <h3 className="font-bold text-lg">{arreglo.descripcion}</h3>
+      
       {arreglo.flores.map((a:any)=>(
         <span key={a.id} className="bg-rose-400 w-25 rounded m-1 p-1 text-sm font-black text-white">{a.nombre}</span>
       ))}
 
-      <p className="font-bold text-sm py-2  ">Haz tu pedido</p>
-        <a
-      href="https://wa.me/50370073010"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-    
+     <div className="flex justify-between mt-4.5">
+        <div>
+         <a
+          href="https://wa.me/50370073010"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+       
   
-     <FontAwesomeIcon
-        icon={faWhatsapp}
-        style={{ color: "rgb(241, 13, 195)", fontSize: "30px" }}
-      />
-    </a>
-
-
-      
+        <FontAwesomeIcon
+            icon={faWhatsapp}
+            style={{ color: "rgb(241, 13, 195)", fontSize: "30px" }}
+          />
+        </a>
+         </div>
+         <div>
+             <span className="text-5xl text-rose-500 font-bold">${arreglo.precio}</span>
+          </div>
+     </div>
+     
     </div>
     </div>
     </motion.div>

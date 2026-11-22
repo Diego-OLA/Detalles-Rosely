@@ -81,6 +81,7 @@ export async function guardarArreglo(arreglo:Arreglo){
   .from('arreglos')
   .insert({
     "descripcion":arreglo.descripcion,
+    "precio":arreglo.precio,
     "imagen_url": arreglo.imagen_url
   })
   .select("*");

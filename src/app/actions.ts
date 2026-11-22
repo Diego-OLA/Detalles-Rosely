@@ -65,10 +65,13 @@ export async function nuevoArreglo(formData: FormData) {
   const descripcionArreglo = formData.get('descripcion');
   const floresId = formData.get('floresId');
   const imgUrl = formData.get('imgUrl');
-  
+  const precio = Number(formData.get("precio"))
+
+  console.log(precio)
 
   const res = await guardarArreglo({
     "descripcion":String(descripcionArreglo),
+    "precio": precio,
     "imagen_url": String(imgUrl)
   })
 
