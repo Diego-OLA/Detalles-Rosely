@@ -3,6 +3,7 @@ import { Flor } from "./flor";
 export interface Arreglo{
     id?:number;
     descripcion:string;
+    precio:number;
     imagen_url:string;
     tipos_flores?: ArregloFlores[];
 }

@@ -12,8 +12,8 @@ export default function Hero({user}:userProp) {
   return (
     <>
   
-    <header className="p-1 md:p-4 w-full absolute z-10 text-center bg-stone-900 opacity-50  ">
-      <div className="flex flex-col-reverse sm:flex-row ">
+    <header className="p-0 md:p-0 w-full absolute z-10 text-center ">
+      <div className="py-2 px-3 flex flex-col-reverse sm:flex-row  bg-stone-900  opacity-90  sm:opacity-75  ">
         <AuthButton user={user}/>   
       <div className="flex flex-col  mx-auto">
       <h1 className=" md:text-3xl  font-bold text-white">FLORES NATURALES Y ETERNAS</h1>
